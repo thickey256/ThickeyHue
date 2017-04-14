@@ -51,7 +51,7 @@
 	}
 
 	?>
-	<form action="/index.php" method="get">
+	<form action="index.php" method="get">
 		<h1>Pick a colour!</h1>
 		<p>
             <label for="colour">Colour:
