@@ -9,6 +9,8 @@
 
 	use ThickeyHue\Service\PhueConfig;
 	use Scriptura\Color\Types\HEX;
+	use Phue\Client;
+	use Phue\Command\SetLightState;
 
 	require_once __DIR__ . '/vendor/autoload.php';
 
@@ -24,10 +26,10 @@
 
 		//create a an interface to the hue bridge
 		$config = new PhueConfig();
-		$hue_client = new \Phue\Client($config->getHueBridgeIp(), $config->getHueBridgeUser());
+		$hue_client = new Client($config->getHueBridgeIp(), $config->getHueBridgeUser());
 
 		// Setting the RGB and Transition time for the new colour
-		$command = new \Phue\Command\SetLightState($config->getLightId());
+		$command = new SetLightState($config->getLightId());
 		$command->on()
                 ->rgb($colour->toRGB()->red(),$colour->toRGB()->green(),$colour->toRGB()->blue())
                 ->transitionTime($_GET['transition']);
