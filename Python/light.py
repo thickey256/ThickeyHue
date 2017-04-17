@@ -67,6 +67,9 @@ while True:
             elif i == 3:
                 print('yellow touched')
                 r = requests.get('http://192.168.0.226/ThickeyHue/index.php?colour=%23ffff00&transition=1')
+            elif i == 11:
+                print('Purple touched')
+                r = requests.get('http://192.168.0.226/ThickeyHue/index.php?colour=%23ff00ff&transition=1')
             else:
                 print('{0} touched!'.format(i))
         
