@@ -31,7 +31,8 @@
 
 		// Setting the RGB and Transition time for the new colour
 		$command = new \Phue\Command\SetLightState($light);
-		$command->rgb($colour->toRGB()->red(),$colour->toRGB()->green(),$colour->toRGB()->blue())
+		$command->on()
+                ->rgb($colour->toRGB()->red(),$colour->toRGB()->green(),$colour->toRGB()->blue())
                 ->transitionTime($_GET['transition']);
 
 		// Send the command to the hue bridge and change the colour
