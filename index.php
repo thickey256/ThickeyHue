@@ -26,11 +26,8 @@
 		$config = new PhueConfig();
 		$hue_client = new \Phue\Client($config->getHueBridgeIp(), $config->getHueBridgeUser());
 
-		//The ID number of the bulb we want to use (use the getLights() function to list them!
-		$light = 12;
-
 		// Setting the RGB and Transition time for the new colour
-		$command = new \Phue\Command\SetLightState($light);
+		$command = new \Phue\Command\SetLightState($config->getLightId());
 		$command->on()
                 ->rgb($colour->toRGB()->red(),$colour->toRGB()->green(),$colour->toRGB()->blue())
                 ->transitionTime($_GET['transition']);

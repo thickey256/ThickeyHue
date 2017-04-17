@@ -13,7 +13,7 @@ class PhueConfig
 {
 	private $hueBridgeIp;
 	private $hueBridgeUser;
-	private $hueBridgeLights;
+	private $lightId;
 
 	function __construct()
 	{
@@ -24,6 +24,7 @@ class PhueConfig
 		*/
 		$this->hueBridgeIp = '192.168.0.237';
 		$this->hueBridgeUser = 'P1vkrJVdhBb89voEfAL1GC9megdBhnel4jt5Wo06';
+		$this->lightId = 12;
 	}
 
 	/**
@@ -45,18 +46,12 @@ class PhueConfig
 	/**
 	 * @return mixed
 	 */
-	public function getHueBridgeLights()
+	public function getLightId()
 	{
-		return $this->hueBridgeLights;
+		return $this->lightId;
 	}
 
-	/**
-	 * @param mixed $hueBridgeLights
-	 */
-	public function setHueBridgeLights($hueBridgeLights)
-	{
-		$this->hueBridgeLights = $hueBridgeLights;
-	}
+
 
 
 }
