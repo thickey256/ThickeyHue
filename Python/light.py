@@ -57,19 +57,19 @@ while True:
         if current_touched & pin_bit and not last_touched & pin_bit:
             if i == 0:
                 print('red touched')
-                r = requests.get('http://192.168.0.226/ThickeyHue/index.php?colour=%23ff0000&transition=1')
+                r = requests.get('http://192.168.2.3/ThickeyHue/index.php?colour=%23ff0000&transition=1')
             elif i == 1:
                 print('green touched')
-                r = requests.get('http://192.168.0.226/ThickeyHue/index.php?colour=%2300ff00&transition=1')
+                r = requests.get('http://192.168.2.3/ThickeyHue/index.php?colour=%2300ff00&transition=1')
             elif i == 2:
                 print('blue touched')
-                r = requests.get('http://192.168.0.226/ThickeyHue/index.php?colour=%2300d6f9&transition=1')
+                r = requests.get('http://192.168.2.3/ThickeyHue/index.php?colour=%2300d6f9&transition=1')
             elif i == 3:
                 print('yellow touched')
-                r = requests.get('http://192.168.0.226/ThickeyHue/index.php?colour=%23ffff00&transition=1')
+                r = requests.get('http://192.168.2.3/ThickeyHue/index.php?colour=%23ffff00&transition=1')
             elif i == 11:
                 print('Purple touched')
-                r = requests.get('http://192.168.0.226/ThickeyHue/index.php?colour=%23ff00ff&transition=1')
+                r = requests.get('http://192.168.2.3/ThickeyHue/index.php?colour=%23ff00ff&transition=1')
             else:
                 print('{0} touched!'.format(i))
         

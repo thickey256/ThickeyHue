@@ -22,9 +22,9 @@ class PhueConfig
 		 * And probably should NOT be committed to github in a real world situation
 		 * But as this is just a demo it's not a problem.
 		*/
-		$this->hueBridgeIp = '192.168.0.237';
-		$this->hueBridgeUser = 'P1vkrJVdhBb89voEfAL1GC9megdBhnel4jt5Wo06';
-		$this->lightId = 12;
+		$this->hueBridgeIp = '192.168.2.2';
+		$this->hueBridgeUser = 'AwaBJXwdYP5ttW78HWSPO2zu5rnW6NFoQtzFnm-9';
+		$this->lightId = 4;
 	}
 
 	/**
